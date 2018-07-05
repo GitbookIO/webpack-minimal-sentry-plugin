@@ -1,0 +1,40 @@
+{
+  "name": "webpack-minimal-sentry-plugin",
+  "version": "1.0.0",
+  "description": "A small webpack 4 plugin that uploads sources to Sentry",
+  "main": "dist/index.js",
+  "repository": "https://github.com/GitbookIO/webpack-minimal-sentry-plugin.git",
+  "author": "jpreynat <johan.preynat@gmail.com>",
+  "license": "Apache-2.0",
+  "private": false,
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.51",
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta.51",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "@babel/preset-flow": "^7.0.0-beta.51",
+    "eslint": "^5.0.1",
+    "eslint-config-gitbook": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.49.3",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "eslint-plugin-prettier": "^2.6.1",
+    "eslint-plugin-react": "^7.10.0",
+    "flow-bin": "^0.75.0",
+    "prettier": "^1.13.7"
+  },
+  "peerDependencies": {
+    "webpack": "^4.0.0"
+  },
+  "scripts": {
+    "prepublish": "yarn build",
+    "build": "babel src --out-dir dist",
+    "lint": "eslint src",
+    "flow": "flow"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0-beta.51",
+    "es6-promise-pool": "^2.5.0",
+    "sentry-api": "^0.1.1"
+  }
+}
